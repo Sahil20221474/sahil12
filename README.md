@@ -66,7 +66,8 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
    - Leave other settings as default.
 4. Click **Create VPC**.
 
-![image](https://github.com/user-attachments/assets/621040e9-2bcd-4eb7-bff0-6173104e6807)
+![image](https://github.com/user-attachments/assets/ac8874a9-cc7d-4e1a-bc6c-ca15dfeef350)
+
 
 
 ### Step 2: Subnet Creation
@@ -92,7 +93,8 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
    - **AZ**: `us-east-1b`.
    - **CIDR Block**: `10.0.0.192/26`.
 
-![image](https://github.com/user-attachments/assets/53a88960-17bd-49df-a545-3f55e263b817)
+![image](https://github.com/user-attachments/assets/4be1f4dc-671d-4776-9aef-127da35c62d1)
+
 
 
 ### Step 3: Internet Gateway (IGW)
@@ -102,7 +104,8 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
 3. Attach the IGW to `My-VPC`:
    - Select the IGW, then click **Actions** → **Attach to VPC** → Choose `My-VPC`.
 
-![image](https://github.com/user-attachments/assets/cb025cef-79c3-4de5-a172-39bdc11350af)
+![image](https://github.com/user-attachments/assets/fcb57b0c-947f-4fbf-888d-0b87e0f15667)
+
 
 
 ### Step 4: Virtual Private Gateway (VPG)
@@ -112,7 +115,8 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
 3. Attach the VPG to `My-VPC`:
    - Select the VPG → **Actions** → **Attach to VPC** → Choose `My-VPC`.
 
-![image](https://github.com/user-attachments/assets/e8ee93a5-692d-4879-881c-4b0d753df22c)
+![image](https://github.com/user-attachments/assets/3dfd766a-1bd7-4f3f-af4d-17bb9b5bb2dc)
+
 
 
 ### Step 5: Configure Route Tables
@@ -129,7 +133,9 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
 3. Associate public subnets:
    - In the **Subnet Associations** tab → **Edit Subnet Associations** → Select `Public-Subnet-1` and `Public-Subnet-2`.
 
-![image](https://github.com/user-attachments/assets/1f35dd61-fdf5-40af-ad60-7865d31c6b30)
+![407446140-1f35dd61-fdf5-40af-ad60-7865d31c6b30](https://github.com/user-attachments/assets/db7c1477-2a43-4f2b-9a0a-41b74ad9ccab)
+
+
 
 
 #### Private Route Table
@@ -141,7 +147,8 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
 3. Associate private subnets:
    - In **Subnet Associations** → **Edit Subnet Associations** → Select `Private-Subnet-1` and `Private-Subnet-2`.
 
-![image](https://github.com/user-attachments/assets/046c0896-bd3b-4fb7-a98f-ba948bf9a1cd)
+![407446268-046c0896-bd3b-4fb7-a98f-ba948bf9a1cd](https://github.com/user-attachments/assets/95506c2d-178f-477f-851e-75348ac4ab6e)
+
 
 
 ### Step 6: Launch EC2 Instances
@@ -152,7 +159,8 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
    - Use a security group allowing SSH (port 22).
 2. Repeat for `Public-Subnet-2`.
 
-![image](https://github.com/user-attachments/assets/3654fbec-c9c2-4723-98ed-5b6bc9398e5e)
+![407446956-3654fbec-c9c2-4723-98ed-5b6bc9398e5e](https://github.com/user-attachments/assets/27891919-3e84-432d-bcce-e995ad5522f8)
+
 
 
 #### Private Subnets
@@ -170,7 +178,8 @@ An AZ is a distinct geographical location within an AWS Region, designed for fau
      - **Port**: `22`.
      - **Source**: Use your IP (`My IP`) or a specific CIDR.
 
-![image](https://github.com/user-attachments/assets/2bcc5065-e3d3-4c0a-b412-7f0ee80757e8)
+
+![407447335-2bcc5065-e3d3-4c0a-b412-7f0ee80757e8](https://github.com/user-attachments/assets/3fa12e5b-3dc4-469e-b838-3701a5f926cd)
 
        
 2. Attach this security group to private instances.
